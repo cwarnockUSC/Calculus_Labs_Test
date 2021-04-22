@@ -9,6 +9,7 @@ from sage.repl.ipython_kernel.all_jupyter import selector
 from numpy import *
 from sympy import *
 from matplotlib import *
+from sage import *
 
 ## Calc 1 Riemann Sum Calculator
 def midpoint(n = slider(1, 100, 1, 4), f = input_box(default = "x^2", type = str), start = input_box(default = "0", type = str),
