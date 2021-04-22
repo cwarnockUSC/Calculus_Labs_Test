@@ -7,8 +7,4 @@ FROM sagemath/sagemath:9.1-py3
 COPY --chown=sage:sage . ${HOME}
 
 # Install this package and dependencies
-USER root
-RUN apt-get -qq update 
-RUN apt-get -qq install -y --no-install-recommends uofsc_calculus_labs 
-RUN apt-get -qq clean
-USER sage
+RUN pip install --user --upgrade ./
