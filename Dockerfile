@@ -7,4 +7,4 @@ FROM sagemath/sagemath:9.1-py3
 COPY --chown=sage:sage . ${HOME}
 
 # Install this package and dependencies
-RUN pip install --user --upgrade ./
+RUN sage -pip install --user --upgrade ./
