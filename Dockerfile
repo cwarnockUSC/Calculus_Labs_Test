@@ -8,7 +8,7 @@ COPY --chown=sage:sage . ${HOME}
 
 # Install this package and dependencies
 USER root
-RUN apt-get -qq update \
- && apt-get -qq install -y --no-install-recommends <uofsc_Calculus_Labs> \
- && apt-get -qq clean
+RUN apt-get -qq update 
+RUN apt-get -qq install -y --no-install-recommends <uofsc_Calculus_Labs> 
+RUN apt-get -qq clean
 USER sage
